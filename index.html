@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خرید تتر</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Vazirmatn",Tahoma,sans-serif;direction:rtl;background:#07090f;color:#e8eef8;min-height:100vh;padding:20px 16px 60px}
+.wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 40px)}
+.shell{width:100%;max-width:440px}
+.hdr{text-align:center;margin-bottom:20px}
+.lm{width:42px;height:42px;background:rgba(0,208,132,.12);border:1px solid #00d084;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#00d084;vertical-align:middle;margin-left:8px}
+.lt{font-size:19px;font-weight:700;vertical-align:middle}
+.tg{font-size:12px;color:#6b7a99;margin-top:4px}
+.steps{display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.sd{display:flex;flex-direction:column;align-items:center;gap:5px}
+.dc{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid #323d55;background:#0e1219;color:#6b7a99}
+.dc.a{border-color:#00d084;background:rgba(0,208,132,.12);color:#00d084}
+.dc.d{border-color:#00d084;background:#00d084;color:#07090f}
+.dl{font-size:9px;color:#6b7a99}.dl.a{color:#00d084}
+.sl{width:50px;height:2px;background:#323d55;margin-bottom:17px}.sl.d{background:#00d084}
+.card{background:#0e1219;border:1px solid #1e2535;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.pg{display:none}.pg.on{display:block}
+.ph{padding:28px 24px 20px;text-align:center;border-bottom:1px solid #1e2535;background:linear-gradient(180deg,rgba(0,208,132,.04),transparent)}
+.plb{font-size:11px;color:#6b7a99;letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:7px}
+.ldot{width:6px;height:6px;border-radius:50%;background:#00d084;box-shadow:0 0 6px #00d084}
+.pbig{font-size:44px;font-weight:800;letter-spacing:-2px;line-height:1;margin-bottom:6px;direction:ltr;display:block}
+.punit{font-size:13px;color:#6b7a99;margin-bottom:12px}
+.pmeta{display:inline-block;background:#131822;border:1px solid #1e2535;border-radius:8px;padding:6px 14px;font-size:11px;color:#6b7a99}
+.p1b{padding:18px 24px 22px}
+.ib{display:flex;align-items:flex-start;gap:9px;border-radius:10px;padding:11px 13px;margin-bottom:10px;font-size:13px;line-height:1.7}
+.ib-y{background:rgba(255,200,74,.07);border:1px solid rgba(255,200,74,.2);color:rgba(255,200,74,.9)}
+.ib-g{background:rgba(0,208,132,.07);border:1px solid rgba(0,208,132,.2);color:rgba(0,208,132,.9)}
+.ib-r{background:rgba(255,77,106,.07);border:1px solid rgba(255,77,106,.25);color:rgba(255,150,163,.9)}
+.bg{width:100%;padding:14px;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;background:#00d084;color:#07090f;font-family:"Vazirmatn",Tahoma,sans-serif;display:block}
+.bo{width:100%;padding:12px;border:1px solid #2a3448;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:#6b7a99;font-family:"Vazirmatn",Tahoma,sans-serif;margin-top:10px;display:block}
+.cb{background:#131822;border:1px solid #1e2535;border-radius:14px;padding:16px;margin:18px 24px 0}
+.clb{font-size:11px;color:#6b7a99;margin-bottom:6px}
+.cv{font-size:14px;font-weight:700;color:#323d55;direction:ltr;margin-bottom:10px}
+.cv.on{font-size:20px;color:#00d084}
+.csep{height:1px;background:#1e2535;margin-bottom:10px}
+.crow{display:flex;justify-content:space-between;font-size:12px}
+.flds{padding:14px 24px 18px}
+.fl{margin-bottom:13px}
+.fll{display:block;font-size:12px;color:#6b7a99;margin-bottom:5px;font-weight:600}
+.fi,.fsel{width:100%;background:#131822;border:1px solid #1e2535;border-radius:10px;padding:11px 13px;color:#e8eef8;font-family:"Vazirmatn",Tahoma,sans-serif;font-size:14px;outline:none;direction:ltr;text-align:right}
+.or-div{text-align:center;font-size:12px;color:#6b7a99;margin:-3px 0 9px;display:flex;align-items:center;gap:8px}
+.or-div span{flex:1;height:1px;background:#1e2535;display:block}
+.p3{padding:22px}
+.si{width:56px;height:56px;background:rgba(0,208,132,.12);border:2px solid #00d084;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 10px}
+.wb{background:#131822;border:1px solid #1e2535;border-radius:14px;overflow:hidden;margin-bottom:11px}
+.wn{display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(0,208,132,.1);border-bottom:1px solid rgba(0,208,132,.2)}
+.nb{background:#00d084;color:#07090f;font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px}
+.wa{padding:13px;display:flex;align-items:center;gap:10px}
+.at{flex:1;font-size:11px;color:#e8eef8;direction:ltr;text-align:left;word-break:break-all;font-weight:600;line-height:1.6}
+.cpb{flex-shrink:0;background:#0e1219;border:1px solid #2a3448;border-radius:8px;padding:8px 12px;color:#6b7a99;font-family:"Vazirmatn",Tahoma,sans-serif;font-size:11px;font-weight:600;cursor:pointer}
+.cpb.cp{background:rgba(0,208,132,.1);border-color:#00d084;color:#00d084}
+.sb{background:#131822;border:1px solid #1e2535;border-radius:14px;padding:13px;margin-bottom:11px}
+.sr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:12px;border-bottom:1px solid #1e2535}
+.sr.last{border-bottom:none}
+.sk{color:#6b7a99}.sv{font-weight:600;direction:ltr;font-size:11px;text-align:left;max-width:200px;word-break:break-all}
+.sv.g{color:#00d084}.sv.y{color:#ffc84a}
+.tbar-wrap{background:#131822;border:1px solid #1e2535;border-radius:10px;padding:11px 13px;margin-bottom:11px}
+.tbar-top{display:flex;justify-content:space-between;font-size:12px;margin-bottom:7px}
+.tbar-bg{background:#1e2535;border-radius:4px;height:5px;overflow:hidden}
+.tbar-fill{background:#00d084;height:5px;border-radius:4px;transition:width 1s linear,background .5s}
+/* ADMIN */
+.adm-wrap{width:100%;max-width:680px}
+.adm-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.sc{background:#0e1219;border:1px solid #1e2535;border-radius:12px;padding:14px}
+.sc .sl2{font-size:11px;color:#6b7a99;margin-bottom:5px}
+.sc .sv2{font-size:20px;font-weight:800}
+.ot{background:#0e1219;border:1px solid #1e2535;border-radius:14px;overflow:hidden;margin-bottom:18px}
+.oth{display:grid;grid-template-columns:90px 1fr 90px 70px 80px;gap:6px;padding:9px 13px;background:#131822;border-bottom:1px solid #1e2535;font-size:11px;color:#6b7a99;font-weight:600}
+.otr{display:grid;grid-template-columns:90px 1fr 90px 70px 80px;gap:6px;padding:10px 13px;border-bottom:1px solid #1e2535;font-size:11px;align-items:center}
+.otr:last-child{border-bottom:none}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700}
+.bw{background:rgba(255,200,74,.12);color:#ffc84a;border:1px solid rgba(255,200,74,.3)}
+.bd{background:rgba(0,208,132,.12);color:#00d084;border:1px solid rgba(0,208,132,.3)}
+.be{background:rgba(255,77,106,.1);color:#ff4d6a;border:1px solid rgba(255,77,106,.3)}
+.ab{border:none;border-radius:5px;padding:3px 8px;font-family:"Vazirmatn",Tahoma,sans-serif;font-size:10px;font-weight:700;cursor:pointer;margin-left:3px}
+.abg{background:rgba(0,208,132,.15);color:#00d084;border:1px solid rgba(0,208,132,.3)}
+.abr{background:rgba(255,77,106,.1);color:#ff4d6a;border:1px solid rgba(255,77,106,.3)}
+.wg{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px}
+.wi{background:#0e1219;border:1px solid #1e2535;border-radius:10px;padding:11px;font-size:10px}
+.wi-net{font-weight:700;color:#6b7a99;margin-bottom:3px}
+.wi-addr{direction:ltr;text-align:left;word-break:break-all;color:#e8eef8;line-height:1.5;margin-bottom:4px}
+.ws-free{color:#00d084;font-weight:700}.ws-busy{color:#ffc84a;font-weight:700}.ws-exp{color:#ff4d6a;font-weight:700}
+.apc{background:#0e1219;border:1px solid #1e2535;border-radius:12px;padding:14px;margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.apc label{font-size:12px;color:#6b7a99;white-space:nowrap}
+.apc input{background:#131822;border:1px solid #1e2535;border-radius:8px;padding:7px 11px;color:#e8eef8;font-family:"Vazirmatn",Tahoma,sans-serif;font-size:14px;width:120px;outline:none;direction:ltr;text-align:center}
+.abb{background:rgba(106,176,245,.1);color:#6ab0f5;border:1px solid rgba(106,176,245,.3);border-radius:8px;padding:7px 14px;font-family:"Vazirmatn",Tahoma,sans-serif;font-size:13px;font-weight:700;cursor:pointer}
+.es{text-align:center;padding:28px;color:#323d55;font-size:13px}
+.footer{text-align:center;padding:14px;font-size:13px;color:#6b7a99;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
+.footer a{color:#00d084;text-decoration:none;direction:ltr;display:inline-block;font-weight:700;letter-spacing:0.5px}
+.footer-icon{width:28px;height:28px;background:rgba(0,208,132,.12);border:1px solid rgba(0,208,132,.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:#0e1219;border:1px solid #00d084;color:#e8eef8;border-radius:10px;padding:11px 20px;font-size:13px;font-weight:500;z-index:999;white-space:nowrap;transition:transform .35s}
+#toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:480px){.sg{grid-template-columns:repeat(2,1fr)}.oth,.otr{grid-template-columns:70px 1fr 80px 60px}.oth span:nth-child(5),.otr span:nth-child(5){display:none}.wg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- صفحه کاربر -->
+<div class="wrap" id="uwrap">
+<div class="shell">
+  <div class="hdr">
+    <div><span class="lm" id="logo-tap" onclick="secretTap()">T</span><span class="lt">خرید تتر</span></div>
+    <div class="tg">واریز تتر - دریافت تومان</div>
+  </div>
+  <div class="steps">
+    <div class="sd"><div class="dc a" id="dc1">1</div><div class="dl a" id="dl1">قیمت</div></div>
+    <div class="sl" id="sl1"></div>
+    <div class="sd"><div class="dc" id="dc2">2</div><div class="dl" id="dl2">اطلاعات</div></div>
+    <div class="sl" id="sl2"></div>
+    <div class="sd"><div class="dc" id="dc3">3</div><div class="dl" id="dl3">واریز</div></div>
+  </div>
+  <div class="card">
+    <div class="pg on" id="p1">
+      <div class="ph">
+        <div class="plb"><div class="ldot"></div>قیمت خرید تتر از شما</div>
+        <span class="pbig" id="pbig" style="color:#00d084">166,000</span>
+        <div class="punit">تومان به ازای هر USDT</div>
+        <div class="pmeta" id="pmeta">لطفا صبر کنید</div>
+      </div>
+      <div class="p1b">
+        <div class="ib ib-y"><span style="font-size:14px;flex-shrink:0">&#9432;</span><span>قیمت فوق قیمت خرید ما از شماست. پس از تایید آدرس کیف پول نمایش داده می شود.</span></div>
+        <div class="ib ib-g"><span style="font-size:14px;flex-shrink:0">&#9201;</span><span>تسویه حداکثر <strong>۱۵ دقیقه</strong> پس از تایید واریز در شبکه انجام می شود.</span></div>
+        <button class="bg" id="btn1" onclick="go2()">تایید و ادامه</button>
+      </div>
+    </div>
+    <div class="pg" id="p2">
+      <div class="cb">
+        <div class="clb">مبلغ قابل دریافت</div>
+        <div class="cv" id="cv">مقدار تتر را وارد کنید</div>
+        <div class="csep"></div>
+        <div class="crow"><span style="color:#6b7a99">قیمت هر تتر</span><span style="font-weight:600" id="p2pr">-</span></div>
+      </div>
+      <div class="flds">
+        <div class="fl"><label class="fll">شبکه انتقال</label>
+          <select class="fsel" id="netsel">
+            <option value="TRC20">TRC20 - ترون (کارمزد پایین)</option>
+            <option value="ERC20">ERC20 - اتریوم</option>
+            <option value="BEP20">BEP20 - بایننس</option>
+          </select>
+        </div>
+        <div class="fl"><label class="fll">مقدار تتر (USDT)</label><input class="fi" type="number" id="ui" placeholder="50" min="1" oninput="calc()"></div>
+        <div class="fl"><label class="fll">شماره کارت مقصد</label><input class="fi" type="text" id="ci" placeholder="6037xxxxxxxxxxxx" maxlength="16" oninput="checkAmt()"></div>
+        <div id="sheba-wrap" style="display:none">
+          <div class="ib ib-y" style="margin-bottom:10px"><span style="flex-shrink:0">&#9432;</span><span>مبلغ بیشتر از ۱۰ میلیون تومان است، شماره شبا الزامی است</span></div>
+          <div class="fl"><label class="fll">شماره شبا مقصد</label><input class="fi" type="text" id="shi" placeholder="IR000000000000000000000000" maxlength="26"></div>
+        </div>
+        <div class="fl"><label class="fll">نام صاحب حساب</label><input class="fi" type="text" id="acname" placeholder="نام و نام خانوادگی" style="text-align:right;direction:rtl"></div>
+        <div class="fl"><label class="fll">شماره همراه</label><input class="fi" type="tel" id="pi" placeholder="09xxxxxxxxx" maxlength="11"></div>
+        <button class="bg" onclick="go3()">تایید و دریافت آدرس کیف پول</button>
+        <button class="bo" onclick="goStep(1)">بازگشت</button>
+      </div>
+    </div>
+    <div class="pg" id="p3">
+      <div class="p3">
+        <div style="text-align:center;margin-bottom:18px">
+          <div class="si">&#10003;</div>
+          <div style="font-size:17px;font-weight:700;margin-bottom:4px">سفارش ثبت شد</div>
+          <div style="font-size:12px;color:#6b7a99;line-height:1.6">تتر را به آدرس زیر ارسال کنید</div>
+        </div>
+        <div class="tbar-wrap">
+          <div class="tbar-top"><span style="color:#6b7a99;font-size:11px">اعتبار قیمت</span><span style="font-weight:700;color:#ffc84a;font-size:12px" id="ttxt">۳۰:۰۰</span></div>
+          <div class="tbar-bg"><div class="tbar-fill" id="tbar" style="width:100%"></div></div>
+        </div>
+        <div class="wb">
+          <div class="wn"><div class="nb" id="nbdg">TRC20</div><span style="font-size:11px;color:#00d084;font-weight:600" id="nlbl">شبکه ترون</span></div>
+          <div class="wa"><div class="at" id="waddr">-</div><button class="cpb" id="cpb" onclick="copyA()">کپی</button></div>
+        </div>
+        <div class="sb">
+          <div class="sr"><span class="sk">شناسه</span><span class="sv" id="s0">-</span></div>
+          <div class="sr"><span class="sk">مقدار تتر</span><span class="sv" id="s1">-</span></div>
+          <div class="sr"><span class="sk">شبکه</span><span class="sv" id="s2">-</span></div>
+          <div class="sr"><span class="sk">مبلغ دریافتی</span><span class="sv g" id="s3">-</span></div>
+          <div class="sr"><span class="sk">واریز به</span><span class="sv" id="s4">-</span></div>
+          <div class="sr"><span class="sk">شماره همراه</span><span class="sv" id="s5">-</span></div>
+          <div class="sr"><span class="sk">تاریخ و ساعت</span><span class="sv" id="s6">-</span></div>
+          <div class="sr last"><span class="sk">اعتبار تا</span><span class="sv y" id="s7">-</span></div>
+        </div>
+        <div class="ib ib-r"><span>&#9888;</span><span>فقط از شبکه انتخاب شده ارسال کنید. شبکه اشتباه موجب از دست رفتن دارایی می شود.</span></div>
+        <button class="bo" style="margin-top:12px" onclick="resetOrder()">ثبت سفارش جدید</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- صفحه ورود ادمین -->
+<div class="wrap" id="alwrap" style="display:none">
+<div class="shell">
+  <div class="card" style="padding:28px">
+    <div style="text-align:center;margin-bottom:22px">
+      <div style="font-size:28px;margin-bottom:8px">&#128274;</div>
+      <div style="font-size:17px;font-weight:700">پنل مدیریت</div>
+      <div style="font-size:12px;color:#6b7a99;margin-top:4px">رمز عبور را وارد کنید</div>
+    </div>
+    <div class="fl"><input class="fi" type="password" id="apass" placeholder="رمز عبور" style="text-align:center;letter-spacing:3px" onkeydown="if(event.key==='Enter')aLogin()"></div>
+    <button class="bg" onclick="aLogin()">ورود به پنل</button>
+    <button class="bo" onclick="showU()">بازگشت</button>
+  </div>
+</div>
+</div>
+
+<!-- پنل ادمین -->
+<div class="wrap" id="awrap" style="display:none;align-items:flex-start;padding-top:20px">
+<div class="adm-wrap">
+  <div class="adm-hdr">
+    <div>
+      <div style="font-size:18px;font-weight:700">پنل مدیریت</div>
+      <div style="font-size:12px;color:#6b7a99;margin-top:2px" id="atime">-</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <span style="background:rgba(31,111,235,.15);border:1px solid rgba(31,111,235,.3);color:#6ab0f5;font-size:11px;padding:3px 10px;border-radius:5px">مدیر</span>
+      <button class="bo" style="width:auto;padding:6px 14px;margin-top:0;font-size:12px" onclick="showU()">خروج</button>
+    </div>
+  </div>
+  <div class="apc">
+    <label>قیمت بیت‌پین (تومان):</label>
+    <input type="number" id="api" placeholder="170000">
+    <label>کسر:</label>
+    <input type="number" id="adi" placeholder="4000" style="width:90px">
+    <button class="abb" onclick="aSetP()">اعمال دستی</button>
+    <div style="font-size:12px;color:#6b7a99">نمایش به کاربر: <span style="color:#00d084;font-weight:700" id="afp">-</span></div>
+    <div style="font-size:11px;color:#6b7a99;width:100%;margin-top:4px">🔄 قیمت هر ۶۰ ثانیه از بیت‌پین بروز می‌شود</div>
+  </div>
+  <div class="sg">
+    <div class="sc"><div class="sl2">سفارش امروز</div><div class="sv2" style="color:#6ab0f5" id="st1">0</div></div>
+    <div class="sc"><div class="sl2">در انتظار</div><div class="sv2" style="color:#ffc84a" id="st2">0</div></div>
+    <div class="sc"><div class="sl2">تتر دریافتی امروز</div><div class="sv2" style="color:#00d084" id="st3">0</div></div>
+    <div class="sc"><div class="sl2">آدرس آزاد</div><div class="sv2" style="color:#00d084" id="st4">0</div></div>
+    <div class="sc"><div class="sl2">آدرس در حال استفاده</div><div class="sv2" style="color:#ffc84a" id="st5">0</div></div>
+    <div class="sc"><div class="sl2">کل سفارش ها</div><div class="sv2" id="st6">0</div></div>
+  </div>
+  <div style="font-size:13px;font-weight:700;color:#6b7a99;margin-bottom:11px;letter-spacing:1px">سفارش های اخیر</div>
+  <div class="ot">
+    <div class="oth"><span>شناسه/زمان</span><span>اطلاعات</span><span>مبلغ</span><span>وضعیت</span><span>عملیات</span></div>
+    <div id="obody"><div class="es">سفارشی ثبت نشده</div></div>
+  </div>
+  <div style="font-size:13px;font-weight:700;color:#6b7a99;margin-bottom:11px;letter-spacing:1px">وضعیت آدرس ها</div>
+  <div class="wg" id="wgrid"></div>
+  <button class="bo" style="max-width:200px;margin:0 auto;display:block" onclick="showU()">خروج از پنل</button>
+</div>
+</div>
+
+<div id="toast"></div>
+<div class="adm-btn" onclick="showAL()" style="display:none">&#9881; پنل مدیریت</div>
+
+<script>
+// ============================================================
+// تنظیمات - اینجا تغییر دهید
+// ============================================================
+var APASS = "admin123";
+var DISC  = 4000;
+var BPRICE= 170000;
+var WP = {
+  TRC20: ["TAddr1YourWallet","TAddr2YourWallet","TAddr3YourWallet","TAddr4YourWallet","TAddr5YourWallet"],
+  ERC20: ["0xAddr1ERC20","0xAddr2ERC20"],
+  BEP20: ["0xAddr1BEP20","0xAddr2BEP20"]
+};
+var NL = {TRC20:"شبکه ترون",ERC20:"شبکه اتریوم",BEP20:"شبکه بایننس"};
+// ============================================================
+
+var _tc=0,_tt=null;
+function secretTap(){
+  _tc++;
+  if(_tt)clearTimeout(_tt);
+  if(_tc>=5){_tc=0;showAL();}
+  else{_tt=setTimeout(function(){_tc=0;},2000);}
+}
+
+var _et  = null;
+
+function lB(){return JSON.parse(localStorage.getItem("bw")||"{}");}
+function sB(b){localStorage.setItem("bw",JSON.stringify(b));}
+function lO(){return JSON.parse(localStorage.getItem("ords")||"[]");}
+function sO(o){localStorage.setItem("ords",JSON.stringify(o));}
+
+function getFree(net){
+  var b=lB(),now=Date.now(),pool=WP[net]||[];
+  Object.keys(b).forEach(function(a){if(b[a].exp<now)delete b[a];});
+  sB(b);
+  for(var i=0;i<pool.length;i++){if(!b[pool[i]])return pool[i];}
+  return null;
+}
+function resW(addr,id){var b=lB();b[addr]={id:id,exp:Date.now()+30*60*1000};sB(b);}
+function freeW(addr){var b=lB();delete b[addr];sB(b);}
+
+var ourP=BPRICE-DISC;
+function setP(t){
+  ourP=t;
+  var el=document.getElementById("pbig");
+  el.textContent=ourP.toLocaleString("fa-IR");
+  el.style.color="#00d084";
+  document.getElementById("pmeta").textContent="نوبیتکس · "+new Date().toLocaleTimeString("fa-IR");
+  document.getElementById("p2pr").textContent=ourP.toLocaleString("fa-IR")+" تومان";
+  calc();
+}
+
+// قیمت پیش‌فرض فوری (DOM آماده‌ست چون script آخر فایله)
+(function(){
+  var el=document.getElementById("pbig");
+  if(el){el.textContent=(BPRICE-DISC).toLocaleString("fa-IR");el.style.color="#00d084";}
+  var p2=document.getElementById("p2pr");
+  if(p2){p2.textContent=(BPRICE-DISC).toLocaleString("fa-IR")+" تومان";}
+  document.getElementById("pmeta").textContent="قیمت پیش‌فرض - در حال بروزرسانی...";
+})();
+
+var _lastNobitex=0;
+var _manualOverride=false;
+
+function applyPrice(toman, src){
+  _lastNobitex=toman;
+  if(!_manualOverride){
+    setP(toman-DISC);
+    BPRICE=toman;
+    var apiEl=document.getElementById("api");
+    if(apiEl) apiEl.value=toman;
+    var afpEl=document.getElementById("afp");
+    if(afpEl) afpEl.textContent=(toman-DISC).toLocaleString("fa-IR")+" تومان";
+    document.getElementById("pmeta").textContent=(src||"والکس")+" · "+new Date().toLocaleTimeString("fa-IR");
+  } else {
+    var apiEl=document.getElementById("api");
+    if(apiEl) apiEl.placeholder=(src||"والکس")+": "+toman.toLocaleString("fa-IR");
+  }
+}
+
+// بیت‌پین - endpoint اصلی (CORS باز)
+function fetchP(){
+  fetch("https://api.bitpin.ir/api/v1/mkt/tickers/")
+    .then(function(r){return r.json();})
+    .then(function(d){
+      // پیدا کردن USDT_IRT در لیست
+      var item=null;
+      if(Array.isArray(d)){
+        for(var i=0;i<d.length;i++){
+          if(d[i].symbol==="USDT_IRT"||d[i].symbol==="USDTIRT"){item=d[i];break;}
+        }
+      }
+      var p=item&&(item.price||item.last_price||item.lastPrice);
+      if(p&&parseFloat(p)>1000){
+        applyPrice(Math.round(parseFloat(p)),"بیت‌پین");
+      } else { noP(); }
+    }).catch(function(){noP();});
+}
+
+function noP(){
+  document.getElementById("pmeta").textContent="خطا در دریافت قیمت از بیت‌پین";
+}
+
+// تایمر نمایش زمان تا بروزرسانی بعدی
+var _countdown=60;
+function tickCountdown(){
+  _countdown--;
+  if(_countdown<=0){_countdown=60;}
+  var ldot=document.querySelector(".ldot");
+  if(ldot){ldot.style.opacity=(_countdown%2===0)?"1":"0.4";}
+}
+
+fetchP();
+setInterval(fetchP,60000);
+setInterval(tickCountdown,1000);
+
+function calc(){
+  var a=parseFloat(document.getElementById("ui").value);
+  var el=document.getElementById("cv");
+  if(!a||a<=0||ourP<=0){el.textContent="مقدار تتر را وارد کنید";el.className="cv";checkAmt();return;}
+  el.textContent=Math.round(a*ourP).toLocaleString("fa-IR")+" تومان";
+  el.className="cv on";
+  checkAmt();
+}
+
+function checkAmt(){
+  var a=parseFloat(document.getElementById("ui").value);
+  var rial=(!isNaN(a)&&a>0&&ourP>0)?Math.round(a*ourP):0;
+  var sw=document.getElementById("sheba-wrap");
+  if(rial>=10000000){
+    sw.style.display="block";
+  } else {
+    sw.style.display="none";
+    document.getElementById("shi").value="";
+    document.getElementById("acname").value="";
+  }
+}
+
+function goStep(n){
+  for(var i=1;i<=3;i++){
+    document.getElementById("p"+i).className="pg"+(i==n?" on":"");
+    document.getElementById("dc"+i).className="dc"+(i==n?" a":i<n?" d":"");
+    document.getElementById("dl"+i).className="dl"+(i==n?" a":"");
+    if(i<3)document.getElementById("sl"+i).className="sl"+(i<n?" d":"");
+  }
+  window.scrollTo(0,0);
+}
+
+function go2(){
+  if(ourP<=0){toast("در حال دریافت قیمت...");return;}
+  goStep(2);
+}
+
+function go3(){
+  var u=document.getElementById("ui").value;
+  var c=document.getElementById("ci").value.trim();
+  var sh=document.getElementById("shi").value.trim();
+  var acn=document.getElementById("acname").value.trim();
+  var p=document.getElementById("pi").value.trim();
+  var net=document.getElementById("netsel").value;
+  if(!u||parseFloat(u)<=0){toast("مقدار تتر را وارد کنید");return;}
+  var rial=Math.round(parseFloat(u)*ourP);
+  var needSheba=rial>=10000000;
+  if(!needSheba&&!c){toast("شماره کارت را وارد کنید");return;}
+  if(c&&c.length<16){toast("شماره کارت باید ۱۶ رقم باشد");return;}
+  if(needSheba&&!sh){toast("برای مبالغ بالای ۱۰ میلیون شماره شبا الزامی است");return;}
+  if(sh&&(!sh.startsWith("IR")||sh.length<24)){toast("شماره شبا معتبر نیست");return;}
+  if(!acn){toast("نام صاحب حساب را وارد کنید");return;}
+  if(!p||p.length<11){toast("شماره همراه معتبر نیست");return;}
+  var addr=getFree(net);
+  if(!addr){toast("آدرس آزاد وجود ندارد، با مدیر تماس بگیرید");return;}
+  var dl="کارت: "+c+(sh?" | شبا: "+sh:"")+(acn?" | "+acn:"");
+  var now=new Date();
+  var exp=new Date(now.getTime()+30*60*1000);
+  var oid="ORD-"+Date.now().toString(36).toUpperCase();
+  resW(addr,oid);
+  var os=lO();
+  os.unshift({id:oid,usdt:parseFloat(u),net:net,rial:rial,dest:dl,phone:p,addr:addr,status:"pending",at:now.toISOString()});
+  sO(os);
+  document.getElementById("waddr").textContent=addr;
+  document.getElementById("nbdg").textContent=net;
+  document.getElementById("nlbl").textContent=NL[net];
+  document.getElementById("s0").textContent=oid;
+  document.getElementById("s1").textContent=u+" USDT";
+  document.getElementById("s2").textContent=net;
+  document.getElementById("s3").textContent=rial.toLocaleString("fa-IR")+" تومان";
+  document.getElementById("s4").textContent=dl;
+  document.getElementById("s5").textContent=p;
+  document.getElementById("s6").textContent=now.toLocaleDateString("fa-IR")+" - "+now.toLocaleTimeString("fa-IR");
+  document.getElementById("s7").textContent=exp.toLocaleTimeString("fa-IR");
+  document.getElementById("cpb").textContent="کپی";
+  document.getElementById("cpb").className="cpb";
+  startTimer(30*60);
+  goStep(3);
+}
+
+function startTimer(secs){
+  if(_et)clearInterval(_et);
+  var tot=secs;
+  _et=setInterval(function(){
+    secs--;
+    if(secs<=0){
+      clearInterval(_et);
+      document.getElementById("ttxt").textContent="منقضی شد";
+      document.getElementById("ttxt").style.color="#ff4d6a";
+      document.getElementById("tbar").style.background="#ff4d6a";
+      return;
+    }
+    var m=Math.floor(secs/60),s=secs%60;
+    document.getElementById("ttxt").textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s;
+    var pct=(secs/tot)*100;
+    document.getElementById("tbar").style.width=pct+"%";
+    document.getElementById("tbar").style.background=pct>50?"#00d084":pct>20?"#ffc84a":"#ff4d6a";
+  },1000);
+}
+
+function resetOrder(){
+  if(_et)clearInterval(_et);
+  document.getElementById("ui").value="";
+  document.getElementById("ci").value="";
+  document.getElementById("shi").value="";
+  document.getElementById("acname").value="";
+  document.getElementById("sheba-wrap").style.display="none";
+  document.getElementById("pi").value="";
+  document.getElementById("netsel").selectedIndex=0;
+  calc();goStep(1);
+}
+
+function copyA(){
+  var a=document.getElementById("waddr").textContent;
+  var btn=document.getElementById("cpb");
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(a).then(function(){
+      btn.textContent="کپی شد";btn.className="cpb cp";
+      setTimeout(function(){btn.textContent="کپی";btn.className="cpb";},3000);
+    });
+  } else {
+    btn.textContent="کپی شد";btn.className="cpb cp";
+    setTimeout(function(){btn.textContent="کپی";btn.className="cpb";},3000);
+  }
+}
+
+// ADMIN
+function showU(){
+  document.getElementById("uwrap").style.display="flex";
+  document.getElementById("alwrap").style.display="none";
+  document.getElementById("awrap").style.display="none";
+}
+function showAL(){
+  document.getElementById("uwrap").style.display="none";
+  document.getElementById("alwrap").style.display="flex";
+  document.getElementById("awrap").style.display="none";
+}
+function aLogin(){
+  if(document.getElementById("apass").value!==APASS){toast("رمز اشتباه است");return;}
+  document.getElementById("uwrap").style.display="none";
+  document.getElementById("alwrap").style.display="none";
+  document.getElementById("awrap").style.display="flex";
+  aRef();
+  setInterval(aRef,10000);
+}
+function aSetP(){
+  var p=parseInt(document.getElementById("api").value);
+  var d=parseInt(document.getElementById("adi").value);
+  if(p>0){BPRICE=p;_manualOverride=true;}
+  if(d>=0)DISC=d;
+  setP(BPRICE-DISC);
+  document.getElementById("afp").textContent=(BPRICE-DISC).toLocaleString("fa-IR")+" تومان";
+  document.getElementById("pmeta").textContent="قیمت دستی · "+new Date().toLocaleTimeString("fa-IR");
+  document.getElementById("manual-badge").style.display="inline";
+  toast("قیمت دستی اعمال شد");
+}
+function aResetP(){
+  _manualOverride=false;
+  document.getElementById("manual-badge").style.display="none";
+  fetchP();
+  toast("بازگشت به قیمت خودکار نوبیتکس");
+}
+function aCon(id){
+  var os=lO();
+  os.forEach(function(o){if(o.id===id){o.status="done";freeW(o.addr);}});
+  sO(os);aRef();toast("سفارش تایید شد");
+}
+function aCan(id){
+  var os=lO();
+  os.forEach(function(o){if(o.id===id){o.status="cancelled";freeW(o.addr);}});
+  sO(os);aRef();toast("سفارش لغو شد");
+}
+function aRef(){
+  var os=lO(),b=lB(),now=Date.now();
+  var today=new Date().toDateString();
+  var tod=os.filter(function(o){return new Date(o.at).toDateString()===today;});
+  var pend=os.filter(function(o){return o.status==="pending";});
+  var usdt=tod.filter(function(o){return o.status==="done";}).reduce(function(s,o){return s+o.usdt;},0);
+  var allA=[].concat(WP.TRC20||[],WP.ERC20||[],WP.BEP20||[]);
+  var free=allA.filter(function(a){return !b[a];}).length;
+  var busy=Object.keys(b).length;
+  document.getElementById("st1").textContent=tod.length;
+  document.getElementById("st2").textContent=pend.length;
+  document.getElementById("st3").textContent=usdt.toFixed(1)+" USDT";
+  document.getElementById("st4").textContent=free;
+  document.getElementById("st5").textContent=busy;
+  document.getElementById("st6").textContent=os.length;
+  document.getElementById("atime").textContent="بروزرسانی: "+new Date().toLocaleTimeString("fa-IR");
+  document.getElementById("afp").textContent=(BPRICE-DISC).toLocaleString("fa-IR")+" تومان";
+  var ob=document.getElementById("obody");
+  if(!os.length){ob.innerHTML='<div class="es">سفارشی ثبت نشده</div>';}
+  else{
+    ob.innerHTML=os.slice(0,30).map(function(o){
+      var exp=o.status==="pending"&&new Date(o.at).getTime()+30*60*1000<now;
+      var st=exp?'<span class="badge be">منقضی</span>':o.status==="done"?'<span class="badge bd">تایید</span>':o.status==="cancelled"?'<span class="badge be">لغو</span>':'<span class="badge bw">انتظار</span>';
+      var ac=(o.status==="pending"&&!exp)?'<button class="ab abg" onclick="aCon(\'"+o.id+\'\')">تایید</button><button class="ab abr" onclick="aCan(\'"+o.id+\'\')">لغو</button>':"-";
+      var dt=new Date(o.at).toLocaleString("fa-IR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+      return '<div class="otr"><span style="font-size:10px;color:#6b7a99">'+o.id.slice(-5)+'<br>'+dt+'</span><span><div style="color:#00d084;font-weight:700">'+o.usdt+' USDT</div><div style="color:#6b7a99">'+o.phone+'</div><div style="color:#6b7a99;direction:ltr;text-align:right;font-size:10px">'+o.addr.slice(0,10)+'...</div></span><span><div style="font-weight:700;color:#00d084">'+o.rial.toLocaleString("fa-IR")+'</div><div style="color:#6b7a99">'+o.net+'</div></span><span>'+st+'</span><span>'+ac+'</span></div>';
+    }).join("");
+  }
+  var wg=document.getElementById("wgrid");
+  wg.innerHTML=Object.keys(WP).map(function(net){
+    return (WP[net]||[]).map(function(addr){
+      var bv=b[addr];
+      var isBusy=!!bv,isExp=isBusy&&bv.exp<now;
+      var sc=isExp?"ws-exp":isBusy?"ws-busy":"ws-free";
+      var st=isExp?"منقضی":isBusy?"در حال استفاده":"آزاد";
+      var tl=isBusy&&!isExp?" ("+Math.round((bv.exp-now)/60000)+" دقیقه)":"";
+      return '<div class="wi"><div class="wi-net">'+net+'</div><div class="wi-addr">'+addr+'</div><div class="wi-status '+sc+'">'+st+tl+'</div>'+( isBusy?'<div style="color:#6b7a99;margin-top:2px;font-size:9px">'+( bv.id||"")+'</div>':"")+'</div>';
+    }).join("");
+  }).join("");
+}
+function toast(m){
+  var el=document.getElementById("toast");
+  el.textContent=m;el.className="show";
+  setTimeout(function(){el.className="";},3000);
+}
+</script>
+<div style="position:fixed;bottom:0;left:0;right:0;background:rgba(7,9,15,0.95);border-top:1px solid #1e2535;z-index:90;padding:10px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px"><span style="width:26px;height:26px;background:rgba(0,208,132,.12);border:1px solid rgba(0,208,132,.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px">&#128222;</span><span style="font-size:12px;color:#6b7a99">پشتیبانی:</span><a href="tel:09043854024" style="color:#00d084;text-decoration:none;font-weight:700;font-size:13px;direction:ltr">09043854024</a></div>
+</body>
+</html>
